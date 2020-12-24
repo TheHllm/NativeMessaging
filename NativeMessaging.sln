@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeMessaging", "NativeMessaging\NativeMessaging.csproj", "{421D220B-CEE5-403A-95AB-A7DB7BB3E46F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeMessagingTests", "NativeMessagingTests\NativeMessagingTests.csproj", "{36541467-18E2-48A3-B2BA-21DD0965F6E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{421D220B-CEE5-403A-95AB-A7DB7BB3E46F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{421D220B-CEE5-403A-95AB-A7DB7BB3E46F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{421D220B-CEE5-403A-95AB-A7DB7BB3E46F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{421D220B-CEE5-403A-95AB-A7DB7BB3E46F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36541467-18E2-48A3-B2BA-21DD0965F6E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36541467-18E2-48A3-B2BA-21DD0965F6E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36541467-18E2-48A3-B2BA-21DD0965F6E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36541467-18E2-48A3-B2BA-21DD0965F6E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33FD4046-861A-4723-B1E3-280C3A515C2E}
+	EndGlobalSection
+EndGlobal
