@@ -9,7 +9,9 @@ namespace NativeMessaging
     public class Client : IDisposable
     {
         private Process prog;
-        private AsyncLock Lock = new();
+        private AsyncLock ReadLock = new();
+        private AsyncLock WriteLock = new();
+
         public Client(Host host)
         {
             prog = new Process()
@@ -33,8 +35,10 @@ namespace NativeMessaging
 
         public async Task SendMessage(object message)
         {
-            byte[] bytes = JsonSerializer.SerializeToUtf8Bytes(message);
+            using var l = await ReadLock.LockAsync();
 
+            byte[] bytes = JsonSerializer.SerializeToUtf8Bytes(message);
+            
             await prog.StandardInput.BaseStream.WriteAsync(BitConverter.GetBytes(bytes.Length));
             await prog.StandardInput.BaseStream.WriteAsync(bytes);
             await prog.StandardInput.BaseStream.FlushAsync();
@@ -42,7 +46,7 @@ namespace NativeMessaging
 
         public async Task<T> ReadMessage<T>()
         {
-            using (IDisposable l = await Lock.LockAsync()) ;
+            using (IDisposable l = await ReadLock.LockAsync()) ;
 
             byte[] bLen = new byte[4];
             await prog.StandardOutput.BaseStream.ReadAsync(bLen, 0, 4);

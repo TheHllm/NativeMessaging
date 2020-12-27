@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <Description />
+    <PackageProjectUrl>https://github.com/TheHllm/NativeMessaging</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TheHllm/NativeMessaging</RepositoryUrl>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageId>NativeMessaging.Client</PackageId>
+    <Authors>TheHllm</Authors>
+    <Company>-</Company>
+    <Product>-</Product>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>NativeMessaging,Chrome</PackageTags>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

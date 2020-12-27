@@ -46,7 +46,11 @@ namespace NativeMessaging
                         string maniLoc = (string)regLoc.OpenSubKey(host).GetValue("");
                         if (!String.IsNullOrWhiteSpace(maniLoc))
                         {
-                            Hosts.Add(await LoadFromManifest(maniLoc));
+                            try
+                            {
+                                Hosts.Add(await LoadFromManifest(maniLoc));
+                            }
+                            catch { }
                         }
                     }
 
