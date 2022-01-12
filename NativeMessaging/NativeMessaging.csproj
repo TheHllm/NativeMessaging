@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Description />
     <PackageProjectUrl>https://github.com/TheHllm/NativeMessaging</PackageProjectUrl>
     <RepositoryUrl>https://github.com/TheHllm/NativeMessaging</RepositoryUrl>
@@ -13,11 +13,13 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>NativeMessaging,Chrome</PackageTags>
     <Version>1.0.1</Version>
+  
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
     <PackageReference Include="NeoSmart.AsyncLock" Version="3.0.1" />
+    <PackageReference Include="System.Text.Json" Version="6.0.1" />
   </ItemGroup>
 
 </Project>
