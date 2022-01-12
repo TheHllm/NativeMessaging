@@ -32,7 +32,12 @@ namespace NativeMessaging
 
         public static async Task<ManifestFile> LoadFile(string path)
         {
-            var data = await File.ReadAllTextAsync(path);
+            string data;
+            using (var streamReader = new StreamReader(path))
+            {
+                await streamReader.ReadToEndAsync();
+                data = File.ReadAllText(path);
+            }
             return JsonSerializer.Deserialize<ManifestFile>(data);
         }
     }

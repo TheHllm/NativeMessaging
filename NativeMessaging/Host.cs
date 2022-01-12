@@ -35,7 +35,7 @@ namespace NativeMessaging
         {
             if (Hosts == null)
             {
-                Hosts = new();
+                Hosts = new List<Host>();
 
                 foreach (string loc in RegistryLocations)
                 {
